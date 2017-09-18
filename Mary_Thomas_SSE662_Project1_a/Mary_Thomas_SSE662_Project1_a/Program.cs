@@ -12,7 +12,8 @@ namespace Mary_Thomas_SSE662_Project1_a
         {
             Console.WriteLine("Calculate cosine: ");
             string num = Console.ReadLine();
-            Calculations.getCos(num);
+            Console.WriteLine(Calculations.getCos(num));
+            Console.ReadKey();
         }
     }
 }

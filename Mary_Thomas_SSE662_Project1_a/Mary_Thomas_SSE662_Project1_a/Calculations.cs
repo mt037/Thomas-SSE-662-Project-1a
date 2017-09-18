@@ -10,7 +10,16 @@ namespace Mary_Thomas_SSE662_Project1_a
     {
         public static double getCos(string num)
         {
-            return Math.Cos(double.Parse(num));
+            double result = 0;
+            if (double.TryParse(num, out result))
+            {
+                result = double.Parse(num);
+                return Math.Cos(result);
+            }
+            else
+            {
+                return -99;
+            }
         }
     }
 }
