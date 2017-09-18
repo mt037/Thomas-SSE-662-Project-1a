@@ -9,17 +9,20 @@ namespace Thomas_SSE_662_Project_1b
 {
     public class TxtFile
     {
-        public void openFile(string fileLoc)
+        public void writeFile(string fileLoc, string txt)
         {
-
+            string[] lines = txt.Split(',');
+            System.IO.File.WriteAllLines(fileLoc, lines);
         }
-        public string readFile(FileStream txtFile)
+        public string readFile(string fileLoc)
         {
+            string returnValue = "";
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Public\TestFolder\test.txt");
+            for(int i = 0; i < lines.Count(); i++)
+            {
+                returnValue = returnValue + ", " + lines[i];
+            }
             return "";
-        }
-        public void writeToConsole(string txt)
-        {
-
         }
     }
 }

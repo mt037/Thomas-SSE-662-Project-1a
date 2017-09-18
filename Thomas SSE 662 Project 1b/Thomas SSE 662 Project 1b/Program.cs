@@ -10,6 +10,9 @@ namespace Thomas_SSE_662_Project_1b
     {
         static void Main(string[] args)
         {
+            TxtFile file = new TxtFile();
+            file.writeFile(@"C:\Users\Public\TestFolder\test.txt", "This, is, a, test!");
+            Console.WriteLine(file.readFile(@"C:\Users\Public\TestFolder\test.txt"));
         }
     }
 }
